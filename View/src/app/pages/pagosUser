@@ -1,0 +1,51 @@
+// Variables globales
+var carrito = []; // Array para almacenar los productos seleccionados
+
+// Función para agregar un producto al carrito
+function agregarAlCarrito(producto) {
+  carrito.push(producto);
+}
+
+// Función para eliminar un producto del carrito
+function eliminarDelCarrito(producto) {
+  var indice = carrito.indexOf(producto);
+  if (indice !== -1) {
+    carrito.splice(indice, 1);
+  }
+}
+
+// Función para calcular el total de la compra
+function calcularTotal() {
+  var total = 0;
+  for (var i = 0; i < carrito.length; i++) {
+    total += carrito[i].precio;
+  }
+  return total;
+}
+
+// Función para procesar el pago
+function procesarPago() {
+  var total = calcularTotal();
+  
+  // Aquí se llamaría al componente "pagosUser" para procesar el pago
+  
+  // Supongamos que el pago se realizó con éxito
+  console.log("¡Pago realizado con éxito!");
+  console.log("Total: $" + total);
+  console.log("Productos: ", carrito);
+  
+  // Vaciar el carrito después de procesar el pago
+  carrito = [];
+}
+
+// Ejemplo de uso
+var producto1 = { nombre: "Casa en venta", precio: 200000 };
+var producto2 = { nombre: "Departamento en alquiler", precio: 1000 };
+
+agregarAlCarrito(producto1);
+agregarAlCarrito(producto2);
+
+console.log("Carrito: ", carrito);
+console.log("Total: $" + calcularTotal());
+
+procesarPago();

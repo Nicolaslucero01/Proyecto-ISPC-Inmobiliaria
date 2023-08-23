@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tablero de Control Administrador</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Tablero de Control Administrador</h1>
+
+    <!-- Formulario para agregar productos -->
+    <h2>Agregar Producto</h2>
+    <form id="product-form">
+        <label for="product-name">Nombre del Producto:</label>
+        <input type="text" id="product-name" required>
+        <label for="product-price">Precio del Producto:</label>
+        <input type="number" id="product-price" required>
+        <button type="submit">Agregar Producto</button>
+    </form>
+
+    <!-- Lista de productos -->
+    <h2>Lista de Productos</h2>
+    <ul id="product-list"></ul>
+
+    <!-- Formulario para agregar clientes -->
+    <h2>Agregar Cliente</h2>
+    <form id="customer-form">
+        <label for="customer-name">Nombre del Cliente:</label>
+        <input type="text" id="customer-name" required>
+        <label for="customer-email">Email del Cliente:</label>
+        <input type="email" id="customer-email" required>
+        <button type="submit">Agregar Cliente</button>
+    </form>
+
+    <!-- Lista de clientes -->
+    <h2>Lista de Clientes</h2>
+    <ul id="customer-list"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>

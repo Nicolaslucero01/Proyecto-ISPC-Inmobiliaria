@@ -1,0 +1,28 @@
+.logo img{
+    width: 120px;
+}
+
+.nav li{
+    list-style: none;
+    transition: all 0.4s;
+}
+
+.nav li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-usuarios {
+    background-color: #1C4C96;
+    padding:0.7em;
+    width: 140px;
+    margin-bottom: 4px;
+    margin-right: 4px;
+}
+
+nav{
+    background-color: #E00000;
+}
+

@@ -1,0 +1,60 @@
+ <section id="login">
+    <div class="container-login">
+        <section class="login">
+            <div class="container">
+                <div class="row full-height justify-content-center">
+                    <div class="col-12 text-center align-self-center py-3">
+                        <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                            <div class="card-3d-wrap mx-auto">
+                                <div class="card-3d-wrapper">
+                                    <div class="card-front">
+                                        <div class="center-wrap">
+
+                                            <form [formGroup]="formLogin" id="loginForm" class="section text-center needs-validation" novalidate>
+                                                <p class="text-danger">{{loginError}}</p>
+                                                <h4 class="mb-4 pb-3">Inicio de sesion</h4>
+
+                                                <!-- --------------email--------------------------- -->
+                                                <div class="form-group">
+                                                    <input formControlName="email" type="email" [formControl]="email" class="form-style form-check-input form-control" placeholder="Email" >
+
+                                                    <i class="input-icon bi bi-person-circle"></i>
+                                                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger mt-2">
+                                                        <div *ngIf="email.errors?.['required']">
+                                                            El email es obligatorio.
+                                                        </div> 
+                                                        <div *ngIf="email.errors?.['email']">
+                                                            El email debe ser válido.
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- ----------password------------------------------ -->
+
+                                                <div class="form-group mt-2">
+                                                    <input formControlName="password" type="password" [formControl]="password"  class="form-style form-check-input form-control" placeholder="Contraseña">
+
+                                                    <i class="input-icon bi bi-key"></i>
+                                                    <div *ngIf="password.invalid && (password.dirty || password.touched)" class= "text-danger  mt-2">
+                                                        <div *ngIf="password.errors?.['required']">
+                                                            La contraseña es obligatoria.
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                                <!-- ----------------------------------------------- -->
+                                                <a><button (click)="login()" id="btn-login" class="btn mt-4"
+                                                        type="submit"><span>Ingresar</span></button></a>
+                                                <!-- <p class="mb-0 mt-3 text-center"><a routerLink="registro" aria-current="page" class="link">Registrate</a></p> -->
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+</section>
+

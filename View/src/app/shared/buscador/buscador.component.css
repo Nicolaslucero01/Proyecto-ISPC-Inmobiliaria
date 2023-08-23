@@ -1,0 +1,20 @@
+.buscador h3 {
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.1em;
+}
+
+.buscador select {
+    margin-bottom: 1.5em;
+    padding: 1.2em 1em;
+    font-size: 1.1em;
+}
+
+.btn-filter {
+    padding: 0.5em;
+    background: #1C4C96;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+}

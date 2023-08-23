@@ -1,0 +1,10 @@
+.search {
+    padding: 1.3em;
+    background-color: #1C4C96;
+}
+.btn{
+    background-color: #e00000;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+}

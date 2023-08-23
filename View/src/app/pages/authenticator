@@ -1,0 +1,92 @@
+Diseño del formulario de inicio de sesión
+
+<form id="loginForm">
+  <input type="text" id="username" placeholder="Nombre de usuario" required>
+  <input type="password" id="password" placeholder="Contraseña" required>
+  <button type="submit">Iniciar sesión</button>
+</form>
+
+Capturar los datos del formulario
+
+const loginForm = document.getElementById('loginForm');
+loginForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+  
+  // Aquí puedes llamar a la función para enviar los datos al backend
+  sendLoginRequest(username, password);
+});
+
+Enviar los datos al backend
+
+function sendLoginRequest(username, password) {
+    const url = 'URL_DEL_BACKEND/login'; // Reemplaza con la URL adecuada
+    
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ username, password })
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Aquí puedes llamar a la función para manejar la respuesta del backend
+      handleLoginResponse(data);
+    })
+    .catch(error => {
+      // Manejo de errores
+      console.error('Error:', error);
+    });
+  }
+
+Manejar la respuesta del backend
+
+function handleLoginResponse(data) {
+    if (data.success) {
+      const token = data.token;
+      // Almacena el token en localStorage o en una cookie
+      localStorage.setItem('token', token);
+      // Redirige al usuario a la página principal o realiza otras acciones necesarias
+      window.location.href = 'URL_DE_LA_PAGINA_PRINCIPAL';
+    } else {
+      // Muestra un mensaje de error al usuario
+      alert(data.message);
+    }
+  }
+
+Proteger las rutas o funcionalidades restringidas
+
+function checkAuthentication() {
+    const token = localStorage.getItem('token');
+    
+    // Verifica si el token está presente y válido
+    if (token) {
+      // Realiza una solicitud al backend para validar el token, por ejemplo, enviar el token en la cabecera de la solicitud
+      fetch('URL_DEL_BACKEND/verify-token', {
+        headers: {
+          'Authorization': 'Bearer ' + token
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (!data.valid) {
+          // Si el token no es válido, redirige al usuario al formulario de inicio de sesión o realiza otras acciones necesarias
+          window.location.href = 'URL_DEL_FORMULARIO_DE_INICIO_DE_SESION';
+        }
+      })
+      .catch(error => {
+        // Manejo de errores
+        console.error('Error:', error);
+      });
+    } else {
+      // Si el token no está presente, redirige al usuario al formulario de inicio de sesión o realiza otras acciones necesarias
+      window.location.href = 'URL_DEL_FORMULARIO_DE_INICIO_DE_SESION';
+    }
+  }
+  
+  // Llama a la función de verificación de autenticación en la carga de la página o cuando sea necesario
+  checkAuthentication();
+  

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tablero de Control</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .product h3 {
+            margin-top: 0;
+        }
+        .product p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Catálogo de Productos</h1>
+    <div class="product-list">
+        {% for item in catalog %}
+        <div class="product">
+            <h3>{{ item.name }}</h3>
+            <p>Precio: ${{ item.price }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

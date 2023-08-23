@@ -1,0 +1,406 @@
+  .container-registro {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #fff;
+    height: 100vh;
+  }
+  
+  a {
+    cursor: pointer;
+    transition: all 200ms linear;
+  
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  .link {
+    color: #88888a;
+  }
+  
+  .link:hover {
+    color: #1C4C96;
+  }
+  
+  h4 {
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #1C4C96;
+  }
+  
+  h6 span {
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .section {
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+  
+  .full-height {
+    min-height: 80vh;
+  }
+  
+  .card-3d-wrap {
+    position: relative;
+    width: 550px;
+    max-width: 100%;
+    height: 400px;
+  }
+  
+  .card-3d-wrapper {
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+  
+  .card-front {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    background-image: url('../../../assets/login-back.svg');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 300%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-shadow: 8px 8px 28px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .center-wrap {
+    position: absolute;
+    width: 100%;
+    padding: 0 35px;
+    top: 45%;
+    left: 0;
+    transform: translate3d(0, -45%, 35px) perspective(100px);
+    z-index: 20;
+    display: block;
+  }
+  
+  .form-group {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  .form-style {
+    padding: 13px 20px;
+    padding-left: 55px;
+    height: 48px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    outline: none;
+    color: #020611;
+    background-color: transparent;
+    border: none;
+    transition: all 200ms linear;
+    box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2);
+  }
+  
+  .form-style:focus,
+  .form-style:active {
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2);
+  }
+  
+  .input-icon {
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 48px;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: left;
+    color: #1C4C96;
+    transition: all 200ms linear;
+  }
+  
+  .form-group input:-ms-input-placeholder {
+    color: #646466;
+    opacity: 0.7;
+    transition: all 200ms linear;
+  }
+  
+  .form-group input::-moz-placeholder {
+    color: #646466;
+    opacity: 0.7;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+  }
+  
+  .form-group input:-moz-placeholder {
+    color: #646466;
+    opacity: 0.7;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+  }
+  
+  .form-group input::-webkit-input-placeholder {
+    color: #646466;
+    opacity: 0.7;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+  }
+  
+  .form-group input:focus:-ms-input-placeholder {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+  }
+  
+  .form-group input:focus::-moz-placeholder {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+  }
+  
+  .form-group input:focus:-moz-placeholder {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+  }
+  
+  .form-group input:focus::-webkit-input-placeholder {
+    opacity: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+  }
+  
+  .form-control.ok input {
+    border: 0.1px solid;
+    border-color: #199d50;
+  }
+  
+  .form-control.ok >.input-icon {
+    color: #199d50;
+  }
+  
+  .form-control.ok input {
+    border: 0.1px solid;
+    border-color: #199d50;
+  }
+  
+  .form-control.falla input {
+    border: 0.1px solid;
+    border-color: #fe5f55;
+  }
+  
+  .form-control.ok div.aviso {
+    visibility: hidden;
+    position: absolute;
+    font-size: small;
+    font-weight: 500;
+    text-align: right;
+    padding-bottom: 10px;
+  }
+  
+  .form-control.falla div.aviso {
+    visibility: visible;
+    font-size: small;
+    font-weight: 500;
+    color: #e74c3c;
+    text-align: right;
+  }
+  
+  .form-control.falla>.input-icon {
+    color: #e74c3c;
+  }
+  
+  .form-control.falla input {
+    border: 0.1px solid;
+    border-color: #fe5f55;
+  }
+  
+  .btn {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: .5rem 1.4rem;
+    margin: 10px 0 0 0;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: .05rem;
+    font-weight: 700;
+    font-size: .75rem;
+    text-transform: uppercase;
+    overflow: hidden;
+    background-color: #102770;
+    color: #fff;
+  }
+  
+  .btn span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.6s;
+  }
+  
+  .btn:hover span {
+    color: #102770;
+  }
+  
+  .btn::before,
+  .btn::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .btn::before {
+    content: "";
+    background: #1C4C96;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  }
+  
+  .btn:hover::before {
+    transform: translate3d(100%, 0, 0);
+  }
+  
+  .btn:hover {
+    background-color: #bbd4fa;
+    color:#1C4C96;
+  }
+  
+  /*validaciones*/
+  .ng-valid:not(form).ng-touched {
+    border-left: 5px solid #42A94B
+  }
+  .ng-invalid:not(form).ng-touched {
+    border-left: 5px solid #a94442
+  }
+  
+  @media (max-width: 380px) {
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10%;
+      display: block;
+      z-index: 100;
+      filter: invert();
+    }
+  
+    .logo img {
+      min-height: 3rem;
+      max-height: 4rem;
+      width: auto;
+      display: block;
+    }
+  
+    .center-wrap {
+      position: absolute;
+      width: 100%;
+      padding: 0 5px;
+      top: 60%;
+      left: 0;
+      transform: translate3d(0, -40%, 35px) perspective(100px);
+      z-index: 20;
+      display: block;
+    }
+    .card-3d-wrapper {
+      width: 100%;
+      height: 90vh;
+      position: absolute;
+      top: 60px;
+      left: 0;
+    }
+    .card-3d-wrap {
+      position: relative;
+      max-width: 100%;
+      margin-top: .9rem;
+    }
+  
+  }
+  @media (max-width: 576px) {
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10%;
+      display: block;
+      z-index: 100;
+      filter: invert();
+    }
+  
+    .logo img {
+      min-height: 4rem;
+      max-height: 5rem;
+      width: auto;
+      display: block;
+    }
+  
+    .center-wrap {
+      position: absolute;
+      width: 100%;
+      padding: 0 15px;
+      top: 60%;
+      left: 0;
+      transform: translate3d(0, -60%, 35px) perspective(100px);
+      z-index: 20;
+      display: block;
+    }
+    .card-3d-wrapper {
+      width: 100%;
+      height: 70vh;
+      position: absolute;
+      top: 60px;
+      left: 0;
+    }
+    .card-3d-wrap {
+      position: relative;
+      width: 350px;
+      max-width: 100%;
+      margin-top: .9rem;
+    }
+  
+  }
+  
+  @media (min-width: 576px) and (max-width: 768px) {
+    .logo {
+      position: absolute;
+      top: 5px;
+      left: 27%;
+      display: block;
+      z-index: 100;
+      filter: invert();
+    }
+  
+    .center-wrap {
+      position: absolute;
+      width: 100%;
+      padding: 0 15px;
+      top: 50%;
+      left: 0;
+      transform: translate3d(0, -50%, 35px) perspective(100px);
+      z-index: 20;
+      display: block;
+    }
+  
+    .card-3d-wrap {
+      position: relative;
+      top: 10px;
+      width: 350px;
+      max-width: 100%;
+      height: 350px;
+      margin-top: 1rem;
+    }
+  }

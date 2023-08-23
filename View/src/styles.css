@@ -1,0 +1,12 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+:root{
+    --rojo_property: #e00000;
+    --azul_property: #1C4C96;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}

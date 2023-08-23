@@ -1,0 +1,15 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    catalog = [
+        {'name': 'Producto 1', 'price': 10.99},
+        {'name': 'Producto 2', 'price': 19.99},
+        {'name': 'Producto 3', 'price': 5.99}
+    ]
+    return render_template('index.html', catalog=catalog)
+
+if __name__ == '__main__':
+    app.run()

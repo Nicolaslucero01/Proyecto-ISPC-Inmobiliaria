@@ -1,0 +1,23 @@
+.text-dest {
+    padding: 2em;
+    background: #1C4C96;
+}
+.text-dest h2 {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.about__text .about__tittle{
+    text-align: center;
+    font-weight: 600;
+}
+
+.about__text .about__paragraph{
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1.6em;
+}

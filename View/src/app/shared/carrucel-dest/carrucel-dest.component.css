@@ -1,0 +1,10 @@
+.text-dest {
+    padding: 2em;
+    background: #1C4C96;
+}
+.text-dest h2 {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
